@@ -20,8 +20,12 @@ function prod(num1,num2){
 prod(2,3);
 
 function quo(num1,num2){
-    quo = num1 / num2;
-    console.log(quo);
+    if(num2 === 0){
+        console.log("Cannot divide by zero");
+    } else {
+        quo = num1 / num2;
+        console.log(quo);
+    }
 }
 
-quo(2,3);
+quo(2,0);
