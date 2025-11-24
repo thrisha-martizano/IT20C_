@@ -27,7 +27,7 @@ class Array{
         }
 
         //Shifting condition
-        for(let i = this.data.length; i > index; i--){
+        for(let i = this.length; i > index; i--){
             this.data[i] = this.data [i-1];
         }
 
@@ -44,6 +44,15 @@ class Array{
         console.log(element + "is not found at any index ");
         return -1;
     }
+
+    update(index,element){
+        if (index < 0 || index >= this.length){
+            console.log("Invalid Index");
+        }
+
+        this.data[index] = element;
+
+    }
 }
 
 //
@@ -51,7 +60,6 @@ class Array{
 arr1 = new Array([4,2,3]);
 
 arr1.traverse();
-arr1.insert(0,50);
+arr1.update(1,50);
 arr1.traverse();
-arr1.search(50);
-arr1.search(10);
+
