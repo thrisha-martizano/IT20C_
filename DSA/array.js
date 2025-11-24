@@ -34,12 +34,24 @@ class Array{
         this.data[index] = data;
         this.length++;
     }
+
+    search(element){
+        for(let i = 0; i < this.length;i++){
+            if(this.data[i] === element) 
+            console.log(element + "is found at index "+ i);
+            return i;
+        }
+        console.log(element + "is not found at any index ");
+        return -1;
+    }
 }
 
 //
 
 arr1 = new Array([4,2,3]);
+
 arr1.traverse();
 arr1.insert(0,50);
 arr1.traverse();
-
+arr1.search(50);
+arr1.search(10);
