@@ -17,6 +17,15 @@ class Stack{
         this.data[this.topIndex] = element;
     }
 
+    is_empty(){
+        return this.topIndex === -1;
+    }
+
+    peek(){
+        // Correcting Statement
+        if(this.is_empty()) return null;
+        return this.data[this.topIndex];
+    }
 }
 
 //
@@ -26,3 +35,5 @@ stack1.push(2);
 stack1.push(3);
 stack1.push(1);
 stack1.traverse();
+// console.log("Is the strack empty?" + stack1.is_empty());
+console.log("Top element of the stack is" + stack1.peek());
